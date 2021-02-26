@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const Carddos = props => {
+	const id = props.id;
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="card mx-4" style={{ width: "18rem" }}>
 			<img src="https://www.universetoday.com/wp-content/uploads/2013/01/death-star.jpg" height="100%" />
@@ -32,9 +35,12 @@ export const Carddos = props => {
 							Learn More!
 						</button>
 					</Link>
-					<button type="button" className="btn btn-outline-warning">
-						{<i className="fas fa-heart" />}
-					</button>
+
+					<Link onClick={() => actions.addFavorite(props.name, "planeta")}>
+						<button type="button" className="btn btn-outline-warning">
+							{<i className="fas fa-heart" />}
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

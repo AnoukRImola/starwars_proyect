@@ -29,8 +29,23 @@ export const Vistaplaneta = props => {
 					</p>
 				</div>
 				<hr className="my-4" />
-				<div className="row">
-					<p>1</p>
+				<div className="row mb-4">
+					<div className="col-md-2">
+						<h5 className="text-center">Diameter</h5>
+						<p className="text-center">{detalles.diameter}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Rotation_period</h5>
+						<p className="text-center">{detalles.rotation_period}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Orbital_period</h5>
+						<p className="text-center">{detalles.orbital_period}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Population</h5>
+						<p className="text-center">{detalles.population}</p>
+					</div>
 				</div>
 			</div>
 		</div>

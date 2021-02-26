@@ -32,6 +32,24 @@ export const Vistapersonajes = props => {
 					</p>
 				</div>
 				<hr className="my-4" />
+				<div className="row mb-4">
+					<div className="col-md-2">
+						<h5 className="text-center">Gender</h5>
+						<p className="text-center">{detalles.gender}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Height</h5>
+						<p className="text-center">{detalles.height}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Mass</h5>
+						<p className="text-center">{detalles.mass}</p>
+					</div>
+					<div className="col-md-2">
+						<h5 className="text-center">Eye_color</h5>
+						<p className="text-center">{detalles.eye_color}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

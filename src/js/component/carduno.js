@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export const Carduno = props => {
+	const id = props.id;
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="card mx-4" style={{ width: "18rem" }}>
 			<img
@@ -35,9 +38,12 @@ export const Carduno = props => {
 							Learn More!
 						</button>
 					</Link>
-					<button type="button" className="btn btn-outline-warning">
-						{<i className="fas fa-heart" />}
-					</button>
+
+					<Link onClick={() => actions.addFavorite(props.name, "persona")}>
+						<button type="button" className="btn btn-outline-warning">
+							{<i className="fas fa-heart" />}
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
